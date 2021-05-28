@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-
 // const fs=require('fs');
 // const path=require('path');
 const helpobj=require("./commands/help.js");
 const treeobj=require("./commands/tree.js");
 const organizeobj=require("./commands/organize.js");
-const utilititesobj=require("./utility.js");
 
 
 let queryarr=process.argv.slice(2);

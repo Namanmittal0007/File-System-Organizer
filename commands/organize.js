@@ -2,6 +2,7 @@ const utilititesobj=require("../utility.js");
 const fs=require('fs');
 const path=require('path');
 
+
 function organize(dirpath){
     if(dirpath==undefined){
         console.log("Please enter Path after 'Tree'");
@@ -35,10 +36,10 @@ function organizehelper(srcpath,destpath){
 }
 function getfiletype(srcfilepath,destpath){
     let ext=path.extname(srcfilepath).slice(1);
-    for(let type in utilititesobj.utilities){
-        let typeoffiles=utilititesobj.utilities[type];
+    for(let type in utilititesobj.types){
+        let typeoffiles=utilititesobj.types[type];
         for(let i=0;i<typeoffiles.length;i++){
-            if(ext==typeoffiles[type][i]){
+            if(ext==typeoffiles[i]){
                 // console.log(ext,type);
                 return type;
             }
